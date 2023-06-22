@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Health App - Predict Diabetes</title>
+  <style>
+    body {
+      background-image: url('https://thumbs.dreamstime.com/b/d-render-smart-doctor-cartoon-character-wearing-uniform-stethoscope-looking-out-corner-medical-background-blank-banner-187072919.jpg');
+      background-position: unset;
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      
+    }
+    
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+    
+    h1 {
+      color: #333;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    form {
+      text-align: center;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #555;
+    }
+    
+    input[type="text"],
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+    
+    select {
+      color: #555;
+    }
+    
+    .submit-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+    }
+    
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Health App - Predict Diabetes</h1>
+    <form action="/predict" method="POST">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="">Select gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="pregnancies">Pregnancies:</label>
+        <select id="pregnancies" name="pregnancies" required>
+          <option value="">Select pregnancies</option>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="glucose">Glucose:</label>
+        <input type="number" id="glucose" name="glucose" required>
+      </div>
+      <div class="form-group">
+        <label for="blood-pressure">Blood Pressure:</label>
+        <input type="number" id="blood-pressure" name="blood-pressure" required>
+      </div>
+      <div class="form-group">
+        <label for="skin-thickness">Skin Thickness:</label>
+        <input type="number" id="skin-thickness" name="skin-thickness" required>
+      </div>
+      <div class="form-group">
+        <label for="insulin">Insulin:</label>
+        <input type="number" id="insulin" name="insulin" required>
+      </div>
+      <div class="form-group">
+        <label for="bmi">BMI:</label>
+        <input type="number" id="bmi" name="bmi" step="0.01" required>
+      </div>
+      <div class="form-group">
+        <label for="diabetes-pedigree">Diabetes Pedigree Function:</label>
+        <input type="number" id="diabetes-pedigree" name="diabetes-pedigree" step="0.01" required>
+      </div>
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+      </div>
+      <button class="submit-btn" type="submit">Predict</button>
+    </form>
+  </div>
+</body>
+</html>

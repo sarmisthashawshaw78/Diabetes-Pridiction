@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Show Patients</title>
+  <style>
+    body {
+      background-image: url('https://thumbs.dreamstime.com/b/d-render-doctor-cartoon-character-holds-clipboard-clip-art-isolated-blue-background-professional-consultation-medical-d-render-220418035.jpg');
+      background-position: unset;
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 40px;
+    }
+
+    .patient-table {
+      margin-bottom: 40px;
+      background-color: transparent;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    .patient-table th,
+    .patient-table td {
+      padding: 8px;
+      text-align: left;
+      color: rgb(9, 39, 49);
+    }
+
+    .patient-table th {
+      background-color: rgba(232, 238, 141, 0.3);
+    }
+
+    .patient-table tr:nth-child(even) {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .animation {
+      text-align: center;
+    }
+
+    .heart {
+      width: 100px;
+      height: 100px;
+      background-image: url('heart.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      animation: heartbeat 1s infinite;
+    }
+
+    @keyframes heartbeat {
+      0% {
+        transform: scale(0.8);
+      }
+      50% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(0.8);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Show Patients</h1>
+
+    <table class="patient-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for patient in data %}
+        <tr>
+          <td>{{ patient['name'] }}</td>
+          <td>{{ patient['age'] }} years old</td>
+          <td>{{ patient['gender'] }}</td>
+          <td>{{ patient['result'] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <div class="animation">
+      <div class="heart"></div>
+    </div>
+  </div>
+</body>
+</html>

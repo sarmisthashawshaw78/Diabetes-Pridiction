@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to Health App</title>
+  <style>
+    body {
+      background-image: url('https://t3.ftcdn.net/jpg/04/27/32/16/360_F_427321689_shQ3NtMNa6PoYSj3Swn1GM40MhEaE3cx.webp');
+      background-position: unset;
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 40px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .section-content {
+      display: flex;
+      justify-content: bottom left;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      width: 200px;
+      height: 200px;
+      background-color: #d08af3;
+      border-radius: 5px;
+      margin: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #fff;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .card:hover {
+      background-color: #a2c9f4;
+    }
+
+    .card-icon {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .animation {
+      text-align: center;
+    }
+
+    .heart {
+      width: 100px;
+      height: 100px;
+      background-image: url('heart.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      animation: heartbeat 1s infinite;
+    }
+
+    @keyframes heartbeat {
+      0% {
+        transform: scale(0.8);
+      }
+      50% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(0.8);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Health App</h1>
+
+
+    <div class="section">
+      <div class="section-content">
+        <div class="card">
+          <span class="card-icon">&#128526;</span>
+          <a href="/predict">Predict Diabetes</a>
+
+            </div>
+            <div class="card">
+              <span class="card-icon">&#128587;</span>
+              <a href="/show-patient">Show Patient</a>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="animation">
+      <div class="heart"></div>
+    </div>
+  </div>
+</body>
+</html>
